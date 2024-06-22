@@ -1,18 +1,21 @@
-import streamlit as st
 import smtplib
 import ssl
 
-
 def send_email(message):
-    host = "smtp.gmail.com"
-    port = 465
+    port = 465  # SSL port
+    try:
+        password = st.secrets["PASSWORD"]
+    except KeyError:
+        st.error("Error: Missing 'PASSWORD' secret. Please set it in secrets.toml.")
+        return  # Exit the function if secret is missing
 
     username = "shantanupokale009@gmail.com"
-    password = st.secrets["PASSWORD"]
-
     receiver = "shantanupokale009@gmail.com"
+
     context = ssl.create_default_context()
 
-    with smtplib.SMTP_SSL(host, port, context=context) as server:
+    with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
         server.login(username, password)
         server.sendmail(username, receiver, message)
+
+    st.info("Your email was sent successfully")
