@@ -2,11 +2,10 @@ import smtplib
 import ssl
 import streamlit as st
 
-
 def send_email(message):
     port = 465  # SSL port
     try:
-        password = st.secrets["password"]
+        password = st.secrets["PASSWORD"]
     except KeyError:
         st.error("Error: Missing 'PASSWORD' secrets. Please set it in secrets.toml.")
         return  # Exit the function if secret is missing
