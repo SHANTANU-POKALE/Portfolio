@@ -1,5 +1,6 @@
 import smtplib
 import ssl
+import streamlit as st
 
 def send_email(message):
     port = 465  # SSL port
