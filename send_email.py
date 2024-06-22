@@ -7,7 +7,7 @@ def send_email(message):
     try:
         password = st.secrets["PASSWORD"]
     except KeyError:
-        st.error("Error: Missing 'PASSWORD' secret. Please set it in secrets.toml.")
+        st.error("Error: Missing 'PASSWORD' secrets. Please set it in Secrets.toml.")
         return  # Exit the function if secret is missing
 
     username = "shantanupokale009@gmail.com"
