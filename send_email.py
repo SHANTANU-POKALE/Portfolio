@@ -6,7 +6,6 @@ import streamlit as st
 def send_email(message):
     port = 465  # SSL port
     try:
-        st.secrets.from_config_file("config/secrets.toml")
         password = st.secrets["PASSWORD"]
     except KeyError:
         st.error("Error: Missing 'PASSWORD' secrets. Please set it in secrets.toml.")
