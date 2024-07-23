@@ -15,9 +15,9 @@ Amravati, with notable achievements in artificial intelligence and web developme
 Intelligence from 1Stop in collaboration with IIT Roorkee, showcasing expertise in Python, VLSI, and
 Verilog. Experienced in internships as a Frontend Web Developer and an Artificial Intelligence Intern,
 excelling in projects like Capsule Network for MNIST Classification and GAN-based anime character
-generation and Automated Interaction Script for App Using Appium. Proficient in a wide array of programming languages, 
+generation and web development. Proficient in a wide array of programming languages, 
 soft skills, and cross-functional domains,
-with a keen interest in next-generation technologies like AI,IOT and prompt engineering.
+with a keen interest in next-generation technologies like AI,IOT.
     """
     st.info(content)
 
